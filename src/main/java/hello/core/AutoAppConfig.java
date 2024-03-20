@@ -6,6 +6,7 @@ import org.springframework.context.annotation.FilterType;
 
 @Configuration
 @ComponentScan(
+       //  basePackages = "hello.core.member", // 지정해서 탐색 (없으면 모든 JAVA코드를 찾음 )
         excludeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = Configuration.class)
 )
 public class AutoAppConfig {
