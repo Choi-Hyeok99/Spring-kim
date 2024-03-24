@@ -16,6 +16,7 @@ public class AppConfig {
     public MemberService memberService(){
         System.out.println("call AppConfig.memberService");
         return new MemberServiceImpl(memberRepository()); // 생성자 주입
+
     }
 
     @Bean
