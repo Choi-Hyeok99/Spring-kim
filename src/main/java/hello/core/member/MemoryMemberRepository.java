@@ -1,23 +1,19 @@
 package hello.core.member;
 
 import org.springframework.stereotype.Component;
-
 import java.util.HashMap;
 import java.util.Map;
-@Component
+@Component // memoryMemberRepository
 public class MemoryMemberRepository implements MemberRepository {
 
-    private static Map<Long , Member > stroe = new HashMap<>();
+    private static Map<Long , Member > store = new HashMap<>();
     @Override
     public void save(Member member) {
-
-        stroe.put(member.getId(),member);
-
-
+        store.put(member.getId(),member);
     }
 
     @Override
-    public Member findById(Long meberId) {
-        return stroe.get(meberId);
+    public Member findById(Long memberId) {
+        return store.get(memberId);
     }
 }

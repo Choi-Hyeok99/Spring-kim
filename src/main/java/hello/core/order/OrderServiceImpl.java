@@ -18,7 +18,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Autowired
-    public void init(MemberRepository memberRepository , DiscountPolicy discountPolicy){
+    public void init(MemberRepository memberRepository, DiscountPolicy discountPolicy){
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
